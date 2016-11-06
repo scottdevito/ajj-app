@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd283d45-6900-416d-b14d-eea0fb28447d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/components/header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/app.js" afterPath="$PROJECT_DIR$/client/components/app.js" />
-    </list>
+    <list default="true" id="bd283d45-6900-416d-b14d-eea0fb28447d" name="Default" comment="" />
     <ignored path="ajj-app.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -72,8 +68,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/components/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+            <state relative-caret-position="170">
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
               <folding>
                 <element signature="e#42#68#0" expanded="true" />
               </folding>
@@ -269,6 +265,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bd283d45-6900-416d-b14d-eea0fb28447d" name="Default" comment="" />
@@ -276,12 +275,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478447651374</updated>
-      <workItem from="1478447652610" duration="2030000" />
+      <workItem from="1478447652610" duration="2995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2030000" />
+    <option name="totallyTimeSpent" value="2995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-200" width="1936" height="1056" extended-state="6" />
@@ -358,8 +357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="170">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
           <folding>
             <element signature="e#42#68#0" expanded="true" />
           </folding>
