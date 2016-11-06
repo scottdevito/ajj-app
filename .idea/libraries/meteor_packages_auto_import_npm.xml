@@ -3779,7 +3779,6 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/isarray/test.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/mime-db/index.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/index.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/minifier-css/1.2.14_1/npm/node_modules/css-stringify/index.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/request.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/tunnel.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/helpers.js" />
@@ -3789,7 +3788,6 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/auth.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/cookies.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/redirect.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/minifier-css/1.2.14_1/npm/node_modules/css-parse/index.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/har.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/querystring.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/caseless/index.js" />
@@ -3981,6 +3979,7 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/es6.regexp.replace.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_object-gops.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/jsonpointer/test.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/minifier-css/1.1.13/npm/node_modules/css-parse/index.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/es6.reflect.delete-property.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/es7.string.trim-left.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_bind.js" />
@@ -3990,6 +3989,7 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/es6.number.min-safe-integer.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/core-util-is/test.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_keyof.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/minifier-css/1.1.13/npm/node_modules/css-stringify/index.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_object-dp.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_math-sign.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_descriptors.js" />
@@ -8700,7 +8700,6 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/isarray/test.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/mime-db/index.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/index.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/minifier-css/1.2.14_1/npm/node_modules/css-stringify/index.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/request.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/tunnel.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/helpers.js" />
@@ -8710,7 +8709,6 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/auth.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/cookies.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/redirect.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/minifier-css/1.2.14_1/npm/node_modules/css-parse/index.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/har.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/request/lib/querystring.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/caseless/index.js" />
@@ -8902,6 +8900,7 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/es6.regexp.replace.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_object-gops.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/jsonpointer/test.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/minifier-css/1.1.13/npm/node_modules/css-parse/index.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/es6.reflect.delete-property.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/es7.string.trim-left.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_bind.js" />
@@ -8911,6 +8910,7 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/es6.number.min-safe-integer.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/http/1.1.8/npm/node_modules/core-util-is/test.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_keyof.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/minifier-css/1.1.13/npm/node_modules/css-stringify/index.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_object-dp.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_math-sign.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/ecmascript-runtime/0.3.14_1/npm/node_modules/core-js/modules/_descriptors.js" />
