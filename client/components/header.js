@@ -2,6 +2,7 @@
  * Created by Scott on 11/6/2016.
  */
 import React, { Component } from 'react';
+import Accounts from './accounts';
 
 class Header extends Component {
     render() {
@@ -11,10 +12,10 @@ class Header extends Component {
                     AJJ App
                 </a>
                 <a className="item">
-                    Main Menu
+                    Belt List
                 </a>
                 <a className="item">
-                    Sign In
+                    <Accounts />
                 </a>
             </div>
         );
