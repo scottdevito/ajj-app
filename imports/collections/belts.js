@@ -4,8 +4,11 @@ import { Mongo } from 'meteor/mongo';
 
 Meteor.methods({
   'belts.insert': function (beltsData) {
-    Belts.insert(beltsData);
-    console.log(beltsData);
+
+    // Ensure that only server can invoke this method
+    if(this.connection == null) {
+      Belts.insert(beltsData);
+    }
   }
 });
 
