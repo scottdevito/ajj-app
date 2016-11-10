@@ -5,7 +5,7 @@ import { check } from 'meteor/check'
 
 Meteor.methods({
   'belts.insert': function (beltsData) {
-
+    // Ensure beltsData is an object
     check(beltsData, Object);
 
     // Ensure that only server can invoke this method
