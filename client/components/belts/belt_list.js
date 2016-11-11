@@ -3,10 +3,22 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Belts } from '../../../imports/collections/belts';
 
 class BeltList extends Component {
-  render() {
-    console.log(this.props.belts);
+renderList() {
+  return this.props.belts.map(belt => {
     return (
-      <div>Belt List</div>
+      <li className="list-group-item" key={belt._id}>
+        Belt {belt._id}
+      </li>
+    )
+  })
+}
+
+  render() {
+        console.log(this.props.belts);
+    return (
+      <ul className="list-group">
+        {this.renderList()}
+      </ul>
     );
   }
 }

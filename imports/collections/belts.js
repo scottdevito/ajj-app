@@ -4,13 +4,13 @@ import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check'
 
 Meteor.methods({
-  'belts.insert': function (beltsData) {
+  'belts.insert': function (item) {
     // Ensure beltsData is an object
-    check(beltsData, Object);
-
+    //check(item, Object);
+    console.log(item);
     // Ensure that only server can invoke this method
     if(this.connection == null) {
-      Belts.insert(beltsData);
+      Belts.insert(item);
     }
   }
 });
