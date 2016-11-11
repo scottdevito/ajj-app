@@ -6,17 +6,18 @@ class BeltList extends Component {
 renderList() {
   return this.props.belts.map(belt => {
     return (
-      <div className={`item ${belt.beltColor}`} key={belt._id}>
-        {belt.beltName}
+      <div className="item" key={belt._id}>
+        <div className={`ui ${belt.beltColor} button`} key={belt._id}>
+          {belt.beltName}
+        </div>
       </div>
     )
   })
 }
 
   render() {
-        console.log(this.props.belts);
     return (
-      <div className="ui middle aligned divided list">
+      <div className="ui list beltflex">
         {this.renderList()}
       </div>
     );

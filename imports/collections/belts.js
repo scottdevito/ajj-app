@@ -6,8 +6,8 @@ import { check } from 'meteor/check'
 Meteor.methods({
   'belts.insert': function (item) {
     // Ensure beltsData is an object
-    //check(item, Object);
-    console.log(item);
+    check(item, Object);
+
     // Ensure that only server can invoke this method
     if(this.connection == null) {
       Belts.insert(item);
