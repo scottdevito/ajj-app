@@ -6,8 +6,8 @@ class BeltList extends Component {
 renderList() {
   return this.props.belts.map(belt => {
     return (
-      <li className="list-group-item" key={belt._id}>
-        Belt {belt._id}
+      <li className={`list-group-item ${belt.beltColor}`} key={belt._id}>
+        {belt.beltName}
       </li>
     )
   })
