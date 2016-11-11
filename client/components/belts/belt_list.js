@@ -6,9 +6,9 @@ class BeltList extends Component {
 renderList() {
   return this.props.belts.map(belt => {
     return (
-      <li className={`list-group-item ${belt.beltColor}`} key={belt._id}>
+      <div className={`item ${belt.beltColor}`} key={belt._id}>
         {belt.beltName}
-      </li>
+      </div>
     )
   })
 }
@@ -16,9 +16,9 @@ renderList() {
   render() {
         console.log(this.props.belts);
     return (
-      <ul className="list-group">
+      <div className="ui middle aligned divided list">
         {this.renderList()}
-      </ul>
+      </div>
     );
   }
 }
