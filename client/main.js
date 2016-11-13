@@ -14,8 +14,6 @@ const routes = (
     <Route path="/" component={App}>
       <IndexRoute component={Welcome} />
       <Route path="beltlist" component={BeltList} />
-      // To be used for routing to TechniqueList depending on which belt button you click on L93
-//      <Route path="techniquelist/:beltId" component={TechniqueList} />
     </Route>
   </Router>
 );

@@ -3,17 +3,18 @@
  */
 import React, { Component } from 'react';
 import Accounts from './accounts';
+import { Link } from 'react-router';
 
 class Header extends Component {
     render() {
         return (
             <div className="ui secondary pointing menu">
-                <a className="item">
+                <Link to="/" className="item">
                     AJJ App
-                </a>
-                <a className="item">
+                </Link>
+                <Link to="beltlist" className="item">
                     Belt List
-                </a>
+                </Link>
                 <a className="item">
                     <Accounts />
                 </a>
