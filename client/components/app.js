@@ -3,13 +3,12 @@
  */
 import React from 'react';
 import Header from './header';
-import BeltList from './belts/belt_list';
 
-export default () => {
+export default (props) => {
     return (
         <div>
             <Header />
-            <BeltList />
+            {props.children}
         </div>
     );
 };
