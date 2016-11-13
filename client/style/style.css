@@ -8,5 +8,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 75vh;
+}
+
+#login-buttons a {
+  text-decoration: none;
 }
