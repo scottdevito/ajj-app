@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Belts } from '../imports/collections/belts';
+import { Techniques } from '../imports/collections/techniques';
 
 Meteor.startup(() => {
   // Publish list of belts/belt info
@@ -15,4 +16,15 @@ Meteor.startup(() => {
       Meteor.call('belts.insert', item);
     });
   }
+
+  // Insert inital technique data into the db if it's not already inserted
+  if (Techniques.find().count() === 0) {
+    const techniquesData = JSON.parse(Assets.getText('techniques.json'));
+
+    techniquesData.map((item) => {
+      Meteor.call('techniques.insert', item);
+    });
+  }
+
+
 });

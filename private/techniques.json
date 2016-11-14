@@ -1,0 +1,38 @@
+[
+  {
+    "techId": "0000",
+    "techName": "First Technique",
+    "techBelt": "white",
+    "techDesc": "This is the first technique in White belt."
+  },
+    {
+    "techId": "0001",
+    "techName": "Second Technique",
+    "techBelt": "white",
+    "techDesc": "This is the second technique in White belt."
+  },
+    {
+    "techId": "0002",
+    "techName": "Third Technique",
+    "techBelt": "white",
+    "techDesc": "This is the second technique in White belt."
+  },
+    {
+    "techId": "0003",
+    "techName": "Fourth Technique",
+    "techBelt": "white",
+    "techDesc": "This is the second technique in White belt."
+  },
+    {
+    "techId": "0004",
+    "techName": "Fifth Technique",
+    "techBelt": "white",
+    "techDesc": "This is the second technique in White belt."
+  },
+    {
+    "techId": "0005",
+    "techName": "Sixth Technique",
+    "techBelt": "white",
+    "techDesc": "This is the second technique in White belt."
+  }
+]
