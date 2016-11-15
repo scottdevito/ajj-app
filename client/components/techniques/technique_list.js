@@ -5,8 +5,14 @@ import { Techniques } from '../../../imports/collections/techniques';
 class TechniqueList extends Component {
 
   // Method for rendering list of Techniques
+  //  filters the techniques from the techniques collection against the state
+  //  from BeltList
   renderTechniqueList() {
-    return this.props.techniques.map(technique => {
+    let visibleBeltColor = this.props.visibleBelt;
+
+    return this.props.techniques.filter(function(obj){
+      return obj.techBelt === visibleBeltColor;
+    }).map(technique => {
       return (
         <div className="item" key={technique._id}>
           <div className="ui button large" key={technique._id}>

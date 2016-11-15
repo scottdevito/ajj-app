@@ -4,11 +4,22 @@ import { Belts } from '../../../imports/collections/belts';
 import TechniqueList from '../techniques/technique_list';
 
 class BeltList extends Component {
+  constructor(props) {
+      super(props);
+
+      //State to keep track of which techniques to display
+      this.state = {
+          visibleBelt: ""
+      };
+  }
 
 // Event handler for belt list button click
 displayBeltTechniques(beltColor, event){
   event.preventDefault();
-  console.log(beltColor);
+
+  this.setState({
+    visibleBelt: beltColor
+});
 }
 
 // Method for rendering list of belts
@@ -30,7 +41,7 @@ renderBeltList() {
         <div className="ui list beltflex">
           {this.renderBeltList()}
         </div>
-          <TechniqueList />
+          <TechniqueList visibleBelt={(this.state.visibleBelt)} />
 
       </div>
     );
