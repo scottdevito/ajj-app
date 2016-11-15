@@ -1,7 +1,22 @@
+
+.flexwrap {
+  display: flex;
+  flex-direction: row;
+  transition: all 4.0s ease;
+}
+
 .beltflex {
   display: flex;
   flex-direction: column;
+  align-items: left;
+
+}
+
+.techniquelistflex {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 60vw;
 }
 
 .welcome {
