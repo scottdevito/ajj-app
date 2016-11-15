@@ -14,9 +14,11 @@
 
 .techniquelistflex {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  width: 60vw;
+  width: 80vw;
+  max-height: 70vh;
 }
 
 .welcome {
