@@ -37,6 +37,7 @@ renderBeltList() {
   }
 }
 
+// Set up belts supscription
 export default createContainer(() => {
   Meteor.subscribe('belts');
 

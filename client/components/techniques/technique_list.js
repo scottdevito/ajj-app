@@ -1,34 +1,35 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
+import { Techniques } from '../../../imports/collections/techniques';
 
 class TechniqueList extends Component {
 
   // Method for rendering list of Techniques
   renderTechniqueList() {
-    return (
-      <div className="ui list techniquelistflex">
-        <div className="ui button large">Technique 1</div>
-        <div className="ui button large">Technique 2</div>
-        <div className="ui button large">Technique 3</div>
-        <div className="ui button large">Technique 4</div>
-        <div className="ui button large">Technique 5</div>
-      </div>
-    )
+    return this.props.techniques.map(technique => {
+      return (
+        <div className="item" key={technique._id}>
+          <div className="ui button large" key={technique._id}>
+            {technique.techName}
+          </div>
+        </div>
+      )
+    })
   }
 
   render() {
     return (
-      <div>
+      <div className="ui list techniquelistflex">
           {this.renderTechniqueList()}
       </div>
     );
   }
 }
 
-export default TechniqueList;
-// Set up techniques subscription later
-// export default createContainer(() => {
-//   Meteor.subscribe('belts');
-//
-//   return { belts: Belts.find({}).fetch() };
-// }, BeltList);
+
+// Set up techniques subscription
+export default createContainer(() => {
+  Meteor.subscribe('techniques');
+
+  return { techniques: Techniques.find({}).fetch() };
+}, TechniqueList);
