@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Techniques } from '../../../imports/collections/techniques';
+import { Link } from 'react-router';
 
 class TechniqueList extends Component {
 
@@ -16,7 +17,7 @@ class TechniqueList extends Component {
       return (
         <div className="item" key={technique._id}>
           <div className="ui button large" key={technique._id}>
-            {technique.techName}
+            <Link to="/technique"> {technique.techName} </Link>
           </div>
         </div>
       )
