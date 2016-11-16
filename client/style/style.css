@@ -30,5 +30,6 @@
   text-decoration: none;
 }
 
+a, a:hover {
   color: #5a5a5a;
 }
