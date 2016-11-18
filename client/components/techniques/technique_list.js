@@ -14,10 +14,12 @@ class TechniqueList extends Component {
     return this.props.techniques.filter(function(obj){
       return obj.techBelt === visibleBeltColor;
     }).map(technique => {
+      const url = `/technique/${technique.techId}`;
+
       return (
         <div className="item" key={technique._id}>
           <div className="ui button large" key={technique._id}>
-            <Link to="/technique"> {technique.techName} </Link>
+            <Link to={url}> {technique.techName} </Link>
           </div>
         </div>
       )

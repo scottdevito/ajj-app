@@ -1,38 +1,128 @@
 [
   {
     "techId": "0000",
-    "techName": "First Technique",
+    "techName": "First White Belt Technique",
     "techBelt": "white",
-    "techDesc": "This is the first technique in White belt."
+    "techDesc": "This is the first technique in white belt."
   },
     {
     "techId": "0001",
-    "techName": "Second Technique",
+    "techName": "Second White Belt Technique",
     "techBelt": "white",
-    "techDesc": "This is the second technique in White belt."
+    "techDesc": "This is the second technique in white belt."
   },
     {
     "techId": "0002",
-    "techName": "Third Technique",
+    "techName": "Third White Belt Technique",
     "techBelt": "white",
-    "techDesc": "This is the second technique in White belt."
+    "techDesc": "This is the third technique in white belt."
   },
     {
     "techId": "0003",
-    "techName": "Fourth Technique",
+    "techName": "Fourth White Belt Technique",
     "techBelt": "white",
-    "techDesc": "This is the second technique in White belt."
+    "techDesc": "This is the fourth technique in white belt."
   },
     {
     "techId": "0004",
-    "techName": "Fifth Technique",
+    "techName": "Fifth White Belt Technique",
     "techBelt": "white",
-    "techDesc": "This is the second technique in White belt."
+    "techDesc": "This is the fifth technique in white belt."
   },
     {
     "techId": "0005",
-    "techName": "Sixth Technique",
+    "techName": "Sixth White Belt Technique",
     "techBelt": "white",
-    "techDesc": "This is the second technique in White belt."
+    "techDesc": "This is the sixth technique in white belt."
+  },
+    {
+    "techId": "0006",
+    "techName": "Seventh White Belt Technique",
+    "techBelt": "white",
+    "techDesc": "This is the seventh technique in white belt."
+  },
+    {
+    "techId": "0007",
+    "techName": "Eigth White Belt Technique",
+    "techBelt": "white",
+    "techDesc": "This is the eighth technique in white belt."
+  },  
+    {
+    "techId": "0008",
+    "techName": "Ninth White Belt Technique",
+    "techBelt": "white",
+    "techDesc": "This is the ninth technique in white belt."
+  },
+    {
+    "techId": "0009",
+    "techName": "Tenth White Belt Technique",
+    "techBelt": "white",
+    "techDesc": "This is the tenth technique in white belt."
+  },
+    {
+    "techId": "0010",
+    "techName": "Eleventh White Belt Technique",
+    "techBelt": "white",
+    "techDesc": "This is the eleventh technique in white belt."
+  },
+    {
+    "techId": "0011",
+    "techName": "Twelvth White Belt Technique",
+    "techBelt": "white",
+    "techDesc": "This is the thelvth technique in white belt."
+  },  
+    {
+    "techId": "0012",
+    "techName": "First Orange Belt Technique",
+    "techBelt": "orange",
+    "techDesc": "This is the first technique in orange belt."
+  },
+    {
+    "techId": "0013",
+    "techName": "Second Orange Belt Technique",
+    "techBelt": "orange",
+    "techDesc": "This is the second technique in orange belt."
+  },
+    {
+    "techId": "0014",
+    "techName": "Third Orange Belt Technique",
+    "techBelt": "orange",
+    "techDesc": "This is the third technique in orange belt."
+  },
+    {
+    "techId": "0015",
+    "techName": "Fourth Orange Belt Technique",
+    "techBelt": "orange",
+    "techDesc": "This is the fourth technique in orange belt."
+  },
+    {
+    "techId": "0016",
+    "techName": "Fifth Orange Belt Technique",
+    "techBelt": "orange",
+    "techDesc": "This is the fifth technique in orange belt."
+  },
+    {
+    "techId": "0017",
+    "techName": "Sixth Orange Belt Technique",
+    "techBelt": "orange",
+    "techDesc": "This is the sixth technique in orange belt."
+  },
+    {
+    "techId": "0018",
+    "techName": "Seventh Orange Belt Technique",
+    "techBelt": "orange",
+    "techDesc": "This is the seventh technique in orange belt."
+  },
+    {
+    "techId": "0019",
+    "techName": "Eighth Orange Belt Technique",
+    "techBelt": "orange",
+    "techDesc": "This is the eighth technique in orange belt."
+  },
+    {
+    "techId": "0020",
+    "techName": "Ninth Orange Belt Technique",
+    "techBelt": "orange",
+    "techDesc": "This is the ninth technique in orange belt."
   }
 ]
