@@ -18,9 +18,11 @@ class TechniqueList extends Component {
 
       return (
         <div className="item" key={technique._id}>
-          <div className="ui button large" key={technique._id}>
-            <Link to={url}> {technique.techName} </Link>
-          </div>
+          <Link to={url}>
+            <div className="ui button large" key={technique._id}>
+             {technique.techName}
+            </div>
+          </Link>
         </div>
       )
     })
