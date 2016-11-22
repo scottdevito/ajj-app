@@ -13,7 +13,7 @@ class Technique extends Component {
           {leftArrow}
         </div>
       <div className="technique-card">
-        <TechniqueCard />
+        <TechniqueCard techId={this.props.params.techId} />
       </div>
 
         <div className="arrows">

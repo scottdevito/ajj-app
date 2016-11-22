@@ -24,7 +24,7 @@ class TechniqueCard extends Component {
             <div className="extra content">
             <div className="ui large transparent left icon input">
               <i className="heart outline icon"></i>
-              <p>Technique #</p>
+              <p>Technique # {this.props.techId}</p>
               <input type="text" placeholder="Add Comment..." />
             </div>
           </div>
