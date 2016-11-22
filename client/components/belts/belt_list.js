@@ -38,7 +38,7 @@ renderBeltList() {
   render() {
     return (
       <div className="flexwrap">
-        <div className="ui list beltflex">
+        <div className="ui list beltlist-flex">
           {this.renderBeltList()}
         </div>
           <TechniqueList visibleBelt={(this.state.visibleBelt)} />

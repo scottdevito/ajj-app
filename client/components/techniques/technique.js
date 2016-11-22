@@ -8,7 +8,7 @@ class Technique extends Component {
     const rightArrow = ">";
 
     return (
-      <div className="techniqueflex">
+      <div className="technique-flex">
         <div className="arrows">
           {leftArrow}
         </div>

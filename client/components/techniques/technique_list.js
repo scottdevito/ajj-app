@@ -30,7 +30,7 @@ class TechniqueList extends Component {
 
   render() {
     return (
-      <div className="ui list techniquelistflex">
+      <div className="ui list techniquelist-flex">
           {this.renderTechniqueList()}
       </div>
     );
