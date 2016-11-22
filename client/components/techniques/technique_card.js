@@ -6,27 +6,25 @@ class TechniqueCard extends Component {
       return (
         <div className="ui card">
           <div className="content">
-            <div className="right floated meta">14h</div>
-              <img className="ui avatar image" src="/images/avatar/large/elliot.jpg" />
-              Elliot
-            </div>
-            <div className="image">
-              <img />
-            </div>
-            <div className="content">
-              <span className="right floated">
-                <i className="heart outline like icon"></i>
-                17 likes
-              </span>
-              <i className="comment icon"></i>
-              3 comments
-            </div>
-            <div className="extra content">
-            <div className="ui large transparent left icon input">
-              <i className="heart outline icon"></i>
-              <p>Technique # {this.props.techId}</p>
-              <input type="text" placeholder="Add Comment..." />
-            </div>
+            <h2>Technique #{this.props.techId}</h2>
+          </div>
+          <div className="technique-image-container">
+            <img className="technique-image" src="http://www.americanjiujitsucenters.com/images/Dojopicture_621x316.png" />
+          </div>
+          <div className="content">
+            <p>Example technique description. This is the description of a technique. In this description, there are bulleted lists, pointers, a successive collection of instructions and a few more things. This is a very basic technique description.</p>
+            <ul>
+              <li>first thing</li>
+              <li>second part of technique</li>
+              <li>third part</li>
+              <li>fifth part</li>
+              <li>sixth part</li>
+              <li>seventh part</li>
+              <li>wow, lots of steps</li>
+            </ul>
+          </div>
+          <div className="extra content">
+            slider
           </div>
         </div>
       );

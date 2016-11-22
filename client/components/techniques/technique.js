@@ -4,20 +4,17 @@ import TechniqueCard from './technique_card';
 
 class Technique extends Component {
   render() {
-    const leftArrow = "<";
-    const rightArrow = ">";
-
     return (
       <div className="technique-flex">
         <div className="arrows">
-          {leftArrow}
+          <i className="chevron left icon"></i>
         </div>
       <div className="technique-card">
         <TechniqueCard techId={this.props.params.techId} />
       </div>
 
         <div className="arrows">
-          {rightArrow}
+          <i className="chevron right icon"></i>
         </div>
       </div>
     );

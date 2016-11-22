@@ -25,7 +25,24 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  max-height: 100vh;
+  height: 90vh;
+}
+
+.ui.card {
+  width: 60vw;
+  max-width:60vw;
+}
+
+.technique-image-container {
+  max-height: 30vh;
+  max-width: 60vw;
+  display: flex;
+  justify-content: center;
+}
+
+.technique-image {
+  max-width: inherit;
+  max-height: inherit;
 }
 
 .welcome {
