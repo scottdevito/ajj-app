@@ -14,7 +14,7 @@ const routes = (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Welcome} />
-      <Route path="/beltlist" component={BeltList} />
+      <Route path="beltlist" component={BeltList} />
       <Route path="technique/:techId" component={Technique} />
     </Route>
   </Router>

@@ -1,12 +1,24 @@
-import { Techniques } from '../../../imports/collections/techniques';
 import React, { Component } from 'react';
+import { Techniques } from '../../../imports/collections/techniques';
+import TechniqueCard from './technique_card';
 
 class Technique extends Component {
   render() {
+    const leftArrow = "<";
+    const rightArrow = ">";
+
     return (
-      <div>
-          <h1>Technique Page</h1>
-          <p>Technique #{this.props.params.techId}</p>
+      <div className="techniqueflex">
+        <div className="arrows">
+          {leftArrow}
+        </div>
+      <div className="technique-card">
+        <TechniqueCard />
+      </div>
+
+        <div className="arrows">
+          {rightArrow}
+        </div>
       </div>
     );
   }
