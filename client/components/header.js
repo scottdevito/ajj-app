@@ -13,8 +13,8 @@ class Header extends Component {
     // (when navigating to beltlist from technique/:techId)
     let currentUrl = browserHistory.getCurrentLocation(this).pathname;
 
-    (currentUrl !== "/beltlist") ? browserHistory.goBack() : '';
-    browserHistory.push(`/beltlist`);
+    (currentUrl !== "/beltlist") ? browserHistory.transitionTo("/beltlist") : '';
+    browserHistory.push("/beltlist");
 }
     render() {
         return (
