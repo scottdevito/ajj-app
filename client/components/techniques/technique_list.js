@@ -6,8 +6,8 @@ import { Link } from 'react-router';
 class TechniqueList extends Component {
 
   // Method for rendering list of Techniques
-  //  filters the techniques from the techniques collection against the state
-  //  from BeltList
+  // Filters the techniques from the techniques collection against the state
+  //  from BeltList and maps them
   renderTechniqueList() {
     let visibleBeltColor = this.props.visibleBelt;
 
