@@ -38,7 +38,7 @@ class TechniqueList extends Component {
 }
 
 
-// Set up techniques subscription
+// Techniques subscription to create list of techniques
 export default createContainer(() => {
   Meteor.subscribe('techniques');
 

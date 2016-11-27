@@ -1,8 +1,14 @@
-import { Techniques } from '../../../imports/collections/techniques'
+// Pass in a technique object as a prop (currentTechnique) to have it's details displayed
 import React, { Component } from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
+import { Techniques } from '../../../imports/collections/techniques';
+
 
 class TechniqueCard extends Component {
     render() {
+      let currentTechniqueInfo = this.props.currentTechniqueInfo;
+      console.log(currentTechniqueInfo);
+
       return (
         <div className="ui card">
           <div className="content">
@@ -24,11 +30,16 @@ class TechniqueCard extends Component {
             </ul>
           </div>
           <div className="extra content">
-            slider
+            slider component
           </div>
         </div>
       );
     }
 }
 
-export default TechniqueCard;
+// Subscription to get technique info based on which techId is passed
+export default createContainer((props) => {
+  Meteor.subscribe('techniques');
+
+  return { currentTechniqueInfo: Techniques.find({ 'techId': props.techId }).fetch() };
+}, TechniqueCard);

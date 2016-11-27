@@ -4,6 +4,7 @@ import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check'
 
 Meteor.methods({
+  // Method to insert techniques.json into Techniques collection
   'techniques.insert': function (item) {
     // Ensure techniquesData is an object
     check(item, Object);
