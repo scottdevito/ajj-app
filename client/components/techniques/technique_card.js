@@ -6,28 +6,21 @@ import { Techniques } from '../../../imports/collections/techniques';
 
 class TechniqueCard extends Component {
     render() {
-      let currentTechniqueInfo = this.props.currentTechniqueInfo;
-      console.log(currentTechniqueInfo);
+      // Variable to keep track of when currentTechniqueInfo query is finished so it's data can be rendered
+      let currentTechniqueInfoIsNotNull = this.props.currentTechniqueInfo != null;
 
       return (
         <div className="ui card">
           <div className="content">
-            <h2>Technique #{this.props.techId}</h2>
+            { currentTechniqueInfoIsNotNull ?
+              <h2>{this.props.currentTechniqueInfo.techName}</h2> : 'Loading technique name...' }
           </div>
           <div className="technique-image-container">
             <img className="technique-image" src="http://www.americanjiujitsucenters.com/images/Dojopicture_621x316.png" />
           </div>
           <div className="content">
-            <p>Example technique description. This is the description of a technique. In this description, there are bulleted lists, pointers, a successive collection of instructions and a few more things. This is a very basic technique description.</p>
-            <ul>
-              <li>first thing</li>
-              <li>second part of technique</li>
-              <li>third part</li>
-              <li>fifth part</li>
-              <li>sixth part</li>
-              <li>seventh part</li>
-              <li>wow, lots of steps</li>
-            </ul>
+            { currentTechniqueInfoIsNotNull ?
+              <div>{this.props.currentTechniqueInfo.techDesc}</div> : 'Loading description...' }
           </div>
           <div className="extra content">
             slider component
@@ -41,5 +34,5 @@ class TechniqueCard extends Component {
 export default createContainer((props) => {
   Meteor.subscribe('techniques');
 
-  return { currentTechniqueInfo: Techniques.find({ 'techId': props.techId }).fetch() };
+  return { currentTechniqueInfo: Techniques.findOne({ 'techId': props.techId }) };
 }, TechniqueCard);
