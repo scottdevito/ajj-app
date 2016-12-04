@@ -26,6 +26,12 @@ class Header extends Component {
                     Belt List
                 </a>
                 <a className="item">
+                    Seminars
+                </a>
+                <a className="item">
+                    Lesson Planner
+                </a>
+                <a className="item">
                     <Accounts />
                 </a>
             </div>
