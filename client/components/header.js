@@ -18,9 +18,9 @@ class Header extends Component {
 }
     render() {
         return (
-            <div className="ui secondary pointing menu">
+            <div className="ui secondary pointing menu large">
                 <Link to="/" className="item">
-                    AJJ App
+                    JJ Guide
                 </Link>
                 <a href="#" onClick={this.onBeltListClick.bind(this)} className="item">
                     Belt List
