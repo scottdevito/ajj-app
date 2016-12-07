@@ -16,7 +16,7 @@ class TechniqueCard extends Component {
               <h2>{this.props.currentTechniqueInfo.techName}</h2> : 'Loading technique name...' }
           </div>
           <div className="technique-image-container">
-            <img className="technique-image" src="http://www.americanjiujitsucenters.com/images/Dojopicture_621x316.png" />
+            <img className="technique-image" src="https://i.ytimg.com/vi/AUQYlCD6guU/hqdefault.jpg" />
           </div>
           <div className="content">
             { currentTechniqueInfoIsNotNull ?
