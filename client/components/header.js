@@ -34,6 +34,16 @@ class Header extends Component {
                 <a className="item">
                     <Accounts />
                 </a>
+                <div className="right menu">
+                  <div className="item ui simple left icon dropdown">
+                    <i className="ellipsis vertical icon large"></i>
+                    <div className="menu">
+                      <div className="item">Edit Technique</div>
+                      <div className="item">Admin Panel</div>
+                    </div>
+                  </div>
+                </div>
+
             </div>
         );
     }
