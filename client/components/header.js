@@ -6,16 +6,28 @@ import Accounts from './accounts';
 import { Link, browserHistory } from 'react-router';
 
 class Header extends Component {
-  onBeltListClick(event) {
-    event.preventDefault();
+    onBeltListClick(event) {
+        event.preventDefault();
 
-    // Hack to prevent url from becoming /technique/beltlist
-    // (when navigating to beltlist from technique/:techId)
-    let currentUrl = browserHistory.getCurrentLocation(this).pathname;
+        // Hack to prevent url from becoming /technique/beltlist
+        // (when navigating to beltlist from technique/:techId)
+        let currentUrl = browserHistory.getCurrentLocation(this).pathname;
+        (currentUrl !== "/beltlist") ? browserHistory.transitionTo("/beltlist") : '';
+        browserHistory.push("/beltlist");
+    }
 
-    (currentUrl !== "/beltlist") ? browserHistory.transitionTo("/beltlist") : '';
-    browserHistory.push("/beltlist");
-}
+    renderEditTechnique() {
+        // Enable Edit Technique button on all technique routes
+        let currentUrl = browserHistory.getCurrentLocation(this).pathname;
+
+        if (currentUrl.includes("/technique/")) {
+            return <div className="item">Edit Technique</div>;
+        }
+            return <div className="disabled item">Edit Technique</div>;
+
+        // TODO Validate that techId is <= the number of techIds in db
+    }
+
     render() {
         return (
             <div className="ui secondary pointing menu large">
@@ -38,7 +50,7 @@ class Header extends Component {
                   <div className="item ui simple left icon dropdown">
                     <i className="ellipsis vertical icon large"></i>
                     <div className="menu">
-                      <div className="item">Edit Technique</div>
+                      {this.renderEditTechnique()}
                       <div className="item">Admin Panel</div>
                     </div>
                   </div>
