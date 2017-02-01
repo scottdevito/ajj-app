@@ -23,7 +23,7 @@ class Header extends Component {
         if (currentUrl.includes("/technique/")) {
             return <div className="item">Edit Technique</div>;
         }
-            return <div className="disabled item">Edit Technique</div>;
+            return;
 
         // TODO Validate that techId is <= the number of techIds in db
     }
