@@ -4,6 +4,8 @@
 import React, { Component } from 'react';
 import Accounts from './accounts';
 import { Link, browserHistory } from 'react-router';
+import Modal from './modal';
+import EditTechniqueModal from './techniques/edit_technique_modal';
 
 class Header extends Component {
     onBeltListClick(event) {
@@ -55,7 +57,9 @@ class Header extends Component {
                     </div>
                   </div>
                 </div>
-
+                <Modal>
+                    <EditTechniqueModal />
+                </Modal>
             </div>
         );
     }

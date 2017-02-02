@@ -70,3 +70,8 @@ a, a:hover {
   max-width: inherit;
   max-height: inherit;
 }
+
+/* Display Semantic UI modal when component exists */
+.ui.modal {
+  display: block;
+}
