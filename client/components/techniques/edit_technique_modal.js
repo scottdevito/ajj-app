@@ -6,7 +6,7 @@ class EditTechniqueModal extends Component {
             <div className="ui modal">
                 <i className="close icon"></i>
                 <div className="header">
-                    Edit Technique #0000
+                    Edit Technique #{this.props.modalTechId}
                 </div>
                 <div className="image content">
                     <div className="description">

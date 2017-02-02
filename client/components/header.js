@@ -14,7 +14,8 @@ class Header extends Component {
 
         // State to keep track of whether modal is active or not
         this.state = {
-            editTechniqueModalVisible: false
+            editTechniqueModalVisible: false,
+            modalTechId: ''
         };
       }
 
@@ -42,9 +43,11 @@ class Header extends Component {
 
     toggleEditTechniqueModal(event) {
         event.preventDefault();
-        
+        let currentUrlTechId = (browserHistory.getCurrentLocation(this).pathname).slice(-4);
+
         this.setState({
-            editTechniqueModalVisible: !this.state.editTechniqueModalVisible
+            editTechniqueModalVisible: !this.state.editTechniqueModalVisible,
+            modalTechId: currentUrlTechId
         });
     }
 
@@ -77,7 +80,7 @@ class Header extends Component {
                 </div>
                 {(this.state.editTechniqueModalVisible) ?
                     <Modal>
-                        <EditTechniqueModal />
+                        <EditTechniqueModal modalTechId={this.state.modalTechId} />
                     </Modal> : ''
                 }
             </div>
