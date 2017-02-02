@@ -4,10 +4,20 @@
 import React, { Component } from 'react';
 import Accounts from './accounts';
 import { Link, browserHistory } from 'react-router';
+
 import Modal from './modal';
 import EditTechniqueModal from './techniques/edit_technique_modal';
 
 class Header extends Component {
+        constructor(props) {
+        super(props);
+
+        // State to keep track of whether modal is active or not
+        this.state = {
+            editTechniqueModalVisible: false
+        };
+      }
+
     onBeltListClick(event) {
         event.preventDefault();
 
@@ -23,11 +33,19 @@ class Header extends Component {
         let currentUrl = browserHistory.getCurrentLocation(this).pathname;
 
         if (currentUrl.includes("/technique/")) {
-            return <div className="item">Edit Technique</div>;
+            return <div onClick={this.toggleEditTechniqueModal.bind(this)} className="item">Edit Technique</div>;
         }
             return;
 
         // TODO Validate that techId is <= the number of techIds in db
+    }
+
+    toggleEditTechniqueModal(event) {
+        event.preventDefault();
+        
+        this.setState({
+            editTechniqueModalVisible: !this.state.editTechniqueModalVisible
+        });
     }
 
     render() {
@@ -57,9 +75,11 @@ class Header extends Component {
                     </div>
                   </div>
                 </div>
-                <Modal>
-                    <EditTechniqueModal />
-                </Modal>
+                {(this.state.editTechniqueModalVisible) ?
+                    <Modal>
+                        <EditTechniqueModal />
+                    </Modal> : ''
+                }
             </div>
         );
     }
