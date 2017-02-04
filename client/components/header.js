@@ -17,6 +17,9 @@ class Header extends Component {
             editTechniqueModalVisible: false,
             modalTechId: ''
         };
+
+        // So that closeModal() has access to setState
+      this.closeModal = this.closeModal.bind(this);
       }
 
     onBeltListClick(event) {
@@ -51,6 +54,12 @@ class Header extends Component {
         });
     }
 
+    closeModal() {
+        this.setState({
+            editTechniqueModalVisible: false
+        });
+    }
+
     render() {
         return (
             <div className="ui secondary pointing menu large">
@@ -80,7 +89,7 @@ class Header extends Component {
                 </div>
                 {(this.state.editTechniqueModalVisible) ?
                     <Modal>
-                        <EditTechniqueModal modalTechId={this.state.modalTechId} />
+                        <EditTechniqueModal modalTechId={this.state.modalTechId} onCloseModal={this.closeModal} />
                     </Modal> : ''
                 }
             </div>

@@ -3,13 +3,18 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Techniques } from '../../../imports/collections/techniques';
 
 class EditTechniqueModal extends Component {
+    handleCloseModal() {
+        // Set parent state to false
+        this.props.onCloseModal();
+    }
+
     render() {
         // Variable to keep track of when currentTechniqueInfo query is finished so it's data can be rendered
         let modalCurrentTechniqueInfoIsNotNull = this.props.modalCurrentTechniqueInfo != null;
         
         return(
             <div className="ui modal">
-                <i className="close icon"></i>
+                <i className="close icon" onClick={this.handleCloseModal.bind(this)}></i>
                 <div className="header">
                     Edit Technique #{this.props.modalTechId}
                 </div>
@@ -26,7 +31,8 @@ class EditTechniqueModal extends Component {
                     </div>
                 </div>
                 <div className="actions">
-                    <div className="ui black deny button">
+                    <div className="ui black deny button" onClick={this.handleCloseModal.bind(this)}
+                    >
                         Cancel
                     </div>
                     <div className="ui positive right labeled icon button">
