@@ -88,3 +88,14 @@ a, a:hover {
 .ui.secondary.pointing.menu.large {
   margin-bottom: 0px;
 }
+
+/* ReactCodeMirror styling */
+.CodeMirror.cm-s-default {
+  height: 70%;
+  width: 100%;
+}
+
+.description.edit-technique-modal-description {
+  margin-right: 50px;
+}
+

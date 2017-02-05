@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
+
 import { Techniques } from '../../../imports/collections/techniques';
+import CodeMirror from 'react-codemirror';
+import 'codemirror/mode/markdown/markdown';
 
 class EditTechniqueModal extends Component {
     handleCloseModal() {
@@ -19,7 +22,7 @@ class EditTechniqueModal extends Component {
                     Edit Technique #{this.props.modalTechId}
                 </div>
                 <div className="image content">
-                    <div className="description">
+                    <div className="description edit-technique-modal-description">
                         <div className="ui header">Title:</div>
                         <p>{modalCurrentTechniqueInfoIsNotNull ?
                             <input type='text' size='50' value={this.props.modalCurrentTechniqueInfo.techName} /> : '' }
@@ -29,9 +32,7 @@ class EditTechniqueModal extends Component {
                             <input type='text' size='50' value={this.props.modalCurrentTechniqueInfo.techImgURL} /> : '' }
                         </p>                            
                         <div className="ui header">Description:</div>
-                        <p>{modalCurrentTechniqueInfoIsNotNull ?
-                            <textarea type='text' size='50' value={this.props.modalCurrentTechniqueInfo.techDesc} /> : '' }
-                        </p>   
+                        {modalCurrentTechniqueInfoIsNotNull ? <CodeMirror options={{mode: 'markdown', lineNumbers: true}} /> : '' }
                     </div>
                     <div className="ui small image">
                         <img src="/images/avatar/large/chris.jpg" />
