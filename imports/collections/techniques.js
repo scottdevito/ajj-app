@@ -13,6 +13,16 @@ Meteor.methods({
     if(this.connection == null) {
       Techniques.insert(item);
     }
+  },
+
+  'techniques.update': function(techId, changesStateObj) {
+    return Techniques.update(Techniques.findOne({ 'techId': techId }), { 
+      $set: { 
+        'techName': changesStateObj.titleChanges,
+        'imageURL': changesStateObj.imageURL,
+        'techDesc': changesStateObj.descriptionChanges
+      } 
+    });
   }
 });
 

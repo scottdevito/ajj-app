@@ -11,8 +11,9 @@ class EditTechniqueModal extends Component {
 
         // State to keep track of user input before submit
         this.state = {
-            descriptionChanges: '',
-            imageURLChanges: ''
+            titleChanges: '',
+            imageURLChanges: '',
+            descriptionChanges: ''
         };
     }
 
@@ -32,8 +33,10 @@ class EditTechniqueModal extends Component {
 
         console.log(this.state.descriptionChanges);
         console.log(this.state.imageURLChanges);
+    }
 
-        // create onSave method to initiate meteor method that stores in collection
+    onSave() {
+        Meteor.call('techniques.update', this.props.modalTechId, this.state);
     }
 
     render() {
@@ -79,7 +82,7 @@ class EditTechniqueModal extends Component {
                     <div className="ui black deny button" onClick={this.handleCloseModal.bind(this)}>
                         Cancel
                     </div>
-                    <div className="ui positive right labeled icon button">
+                    <div className="ui positive right labeled icon button" onClick={this.onSave.bind(this)}>
                         Save
                     <i className="checkmark icon"></i>
                     </div>
