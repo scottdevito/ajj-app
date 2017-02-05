@@ -6,13 +6,38 @@ import CodeMirror from 'react-codemirror';
 import 'codemirror/mode/markdown/markdown';
 
 class EditTechniqueModal extends Component {
+    constructor(props) {
+        super(props);
+
+        // State to keep track of user input before submit
+        this.state = {
+            descriptionChanges: '',
+            imageURLChanges: ''
+        };
+    }
+
     handleCloseModal() {
         // Set parent state to false
         this.props.onCloseModal();
     }
 
+    onInputChange(inputId, content) {
+        let stateToChange = `${inputId}Changes`;
+        console.log(stateToChange);
+
+        // Store content in this.state
+        this.setState({
+            [stateToChange]: content
+        });
+
+        console.log(this.state.descriptionChanges);
+        console.log(this.state.imageURLChanges);
+
+        // create onSave method to initiate meteor method that stores in collection
+    }
+
     render() {
-        // Variable to keep track of when currentTechniqueInfo query is finished so it's data can be rendered
+        // Variable to keep track of when currentTechniqueInfo query is finished so its data can be rendered
         let modalCurrentTechniqueInfoIsNotNull = this.props.modalCurrentTechniqueInfo != null;
         
         return(
@@ -25,14 +50,26 @@ class EditTechniqueModal extends Component {
                     <div className="description edit-technique-modal-description">
                         <div className="ui header">Title:</div>
                         <p>{modalCurrentTechniqueInfoIsNotNull ?
-                            <input type='text' size='50' value={this.props.modalCurrentTechniqueInfo.techName} /> : '' }
+                            <input 
+                                type='text' 
+                                size='50' 
+                                value={this.props.modalCurrentTechniqueInfo.techName}
+                                onChange={this.onInputChange.bind(this, "title")} /> : '' }
                         </p>
                         <div className="ui header">Image URL:</div>
                         <p>{modalCurrentTechniqueInfoIsNotNull ?
-                            <input type='text' size='50' value={this.props.modalCurrentTechniqueInfo.techImgURL} /> : '' }
+                            <input 
+                                type='text' 
+                                size='50' 
+                                value={this.props.modalCurrentTechniqueInfo.techImgURL}
+                                onChange={this.onInputChange.bind(this, "imageURL")} /> : '' }
                         </p>                            
                         <div className="ui header">Description:</div>
-                        {modalCurrentTechniqueInfoIsNotNull ? <CodeMirror options={{mode: 'markdown', lineNumbers: true}} /> : '' }
+                        {modalCurrentTechniqueInfoIsNotNull ? 
+                            <CodeMirror 
+                                options={{mode: 'markdown', lineNumbers: true}}
+                                onChange={this.onInputChange.bind(this, "description")} />
+                        : '' }
                     </div>
                     <div className="ui small image">
                         <img src="/images/avatar/large/chris.jpg" />
