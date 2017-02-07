@@ -19,7 +19,7 @@ Meteor.methods({
     return Techniques.update(Techniques.findOne({ 'techId': techId }), { 
       $set: { 
         'techName': changesStateObj.titleChanges,
-        'imageURL': changesStateObj.imageURL,
+        'techImgURL': changesStateObj.imageURLChanges,
         'techDesc': changesStateObj.descriptionChanges
       } 
     });

@@ -17,32 +17,37 @@ class EditTechniqueModal extends Component {
         };
     }
 
+    componentWillMount() {
+        this.setState({
+            titleChanges: this.props.modalCurrentTechniqueInfo.techName,
+            imageURLChanges: this.props.modalCurrentTechniqueInfo.techImgURL,
+            descriptionChanges: this.props.modalCurrentTechniqueInfo.techDesc
+        });
+    }
+
     handleCloseModal() {
         // Set parent state to false
         this.props.onCloseModal();
     }
 
-    onInputChange(inputId, content) {
+    onInputChange(inputId, event) {
         let stateToChange = `${inputId}Changes`;
-        console.log(stateToChange);
 
         // Store content in this.state
         this.setState({
-            [stateToChange]: content
+            [stateToChange]: event.target.value
         });
-
-        console.log(this.state.descriptionChanges);
-        console.log(this.state.imageURLChanges);
     }
 
-    onSave() {
+    onSave(event) {
+        console.log(this.state);
         Meteor.call('techniques.update', this.props.modalTechId, this.state);
+        this.props.onCloseModal();
     }
 
     render() {
         // Variable to keep track of when currentTechniqueInfo query is finished so its data can be rendered
         let modalCurrentTechniqueInfoIsNotNull = this.props.modalCurrentTechniqueInfo != null;
-        
         return(
             <div className="ui modal">
                 <i className="close icon" onClick={this.handleCloseModal.bind(this)}></i>
@@ -56,7 +61,7 @@ class EditTechniqueModal extends Component {
                             <input 
                                 type='text' 
                                 size='50' 
-                                value={this.props.modalCurrentTechniqueInfo.techName}
+                                defaultValue={this.props.modalCurrentTechniqueInfo.techName}
                                 onChange={this.onInputChange.bind(this, "title")} /> : '' }
                         </p>
                         <div className="ui header">Image URL:</div>
@@ -64,7 +69,7 @@ class EditTechniqueModal extends Component {
                             <input 
                                 type='text' 
                                 size='50' 
-                                value={this.props.modalCurrentTechniqueInfo.techImgURL}
+                                defaultValue={this.props.modalCurrentTechniqueInfo.techImgURL}
                                 onChange={this.onInputChange.bind(this, "imageURL")} /> : '' }
                         </p>                            
                         <div className="ui header">Description:</div>
@@ -75,7 +80,7 @@ class EditTechniqueModal extends Component {
                         : '' }
                     </div>
                     <div className="ui small image">
-                        <img src="/images/avatar/large/chris.jpg" />
+                        <img src={this.state.imageURLChanges} />
                     </div>
                 </div>
                 <div className="actions">
