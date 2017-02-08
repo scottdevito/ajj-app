@@ -33,14 +33,20 @@ class EditTechniqueModal extends Component {
     onInputChange(inputId, event) {
         let stateToChange = `${inputId}Changes`;
 
-        // Store content in this.state
+        // Store input value in this.state
         this.setState({
             [stateToChange]: event.target.value
         });
     }
 
+    onEditorChange(content) {
+        // Store content in this.state
+        this.setState({
+            descriptionChanges: content
+        });
+    }
+
     onSave(event) {
-        console.log(this.state);
         Meteor.call('techniques.update', this.props.modalTechId, this.state);
         this.props.onCloseModal();
     }
@@ -75,8 +81,9 @@ class EditTechniqueModal extends Component {
                         <div className="ui header">Description:</div>
                         {modalCurrentTechniqueInfoIsNotNull ? 
                             <CodeMirror 
+                                value={this.state.descriptionChanges}
                                 options={{mode: 'markdown', lineNumbers: true}}
-                                onChange={this.onInputChange.bind(this, "description")} />
+                                onChange={this.onEditorChange.bind(this)} />
                         : '' }
                     </div>
                     <div className="ui small image">
