@@ -1,6 +1,8 @@
 // Pass in a technique object as a prop (currentTechnique) to have it's details displayed
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
+import { markdown } from 'markdown';
+
 import { Techniques } from '../../../imports/collections/techniques';
 
 
@@ -8,6 +10,14 @@ class TechniqueCard extends Component {
     render() {
       // Variable to keep track of when currentTechniqueInfo query is finished so it's data can be rendered
       let currentTechniqueInfoIsNotNull = this.props.currentTechniqueInfo != null;
+      
+      // Create variable so that div can render without data
+      let rawHTML = '';
+      
+      // Assigns markdown string converted to HTML after techDesc is loaded
+      if(currentTechniqueInfoIsNotNull) {
+        rawHTML = markdown.toHTML(this.props.currentTechniqueInfo.techDesc);
+      }
 
       return (
         <div className="ui card">
@@ -21,7 +31,7 @@ class TechniqueCard extends Component {
           </div>
           <div className="content">
             { currentTechniqueInfoIsNotNull ?
-              <div>{this.props.currentTechniqueInfo.techDesc}</div> : '' }
+              <div dangerouslySetInnerHTML={{__html: rawHTML}}></div> : '' }
           </div>
           <div className="extra content">
             slider component
