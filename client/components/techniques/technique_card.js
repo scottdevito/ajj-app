@@ -13,14 +13,15 @@ class TechniqueCard extends Component {
         <div className="ui card">
           <div className="content">
             { currentTechniqueInfoIsNotNull ?
-              <h2>{this.props.currentTechniqueInfo.techName}</h2> : 'Loading technique name...' }
+              <h2>{this.props.currentTechniqueInfo.techName}</h2> : '' }
           </div>
           <div className="technique-image-container">
-            <img className="technique-image" src="https://i.ytimg.com/vi/AUQYlCD6guU/hqdefault.jpg" />
+            { currentTechniqueInfoIsNotNull ? 
+              <img className="technique-image" src={this.props.currentTechniqueInfo.techImgURL} /> : '' }
           </div>
           <div className="content">
             { currentTechniqueInfoIsNotNull ?
-              <div>{this.props.currentTechniqueInfo.techDesc}</div> : 'Loading description...' }
+              <div>{this.props.currentTechniqueInfo.techDesc}</div> : '' }
           </div>
           <div className="extra content">
             slider component
