@@ -47,7 +47,11 @@ class EditTechniqueModal extends Component {
     }
 
     onSave(event) {
-        Meteor.call('techniques.update', this.props.modalTechId, this.state);
+        Meteor.call('techniques.update', this.props.modalTechId, this.state, function(error, result) {
+            if (error) {
+                console.log(error);
+            }
+        });
         this.props.onCloseModal();
     }
 
